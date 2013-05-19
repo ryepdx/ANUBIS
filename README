@@ -12,13 +12,18 @@ in your PHP setup. Consult
 http://php.net/manual/en/book.pdo.php
 on how to do this.
 
-Edit config.inc.php with the details of your database.
-These are the variables:
+Make a copy of example.settings.inc.php and rename it to settings.inc.php.
+
+These are the variables you must then define in settings.inc.php:
 
 $dbdatabase - name of data base to connect to.
-$dbusername - username to connect with.
-$dbpassword - password to connect with.
-$dbhost - host to connect to.
+$dbusername - username to connect with. (MySQL only)
+$dbpassword - password to connect with. (MySQL only)
+$dbhost - host to connect to. (MySQL only)
+
+settings.inc.php is not included in the repository and is listed in .gitignore
+to protect people from accidentally committing their database information to
+Github and to allow easier pulls from the repo on live installations.
 
 To chose which type of database to connect to, set the following to '1' to
 select that database:
